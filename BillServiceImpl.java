@@ -42,6 +42,5 @@ public class BillServiceImpl implements BillService {
     @Override
     public List<Bill> findByParams(BillParam billParam) {
         return billDao.selectByParams(billParam);
-    }
-
+     
      
