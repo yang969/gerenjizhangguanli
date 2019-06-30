@@ -21,7 +21,7 @@ import java.util.List;
 public class BillController {
 
     @Resource
-    private BillService billService;
+    private BillService billService;                     
 
     @Resource
     private RoleService roleService;
