@@ -35,7 +35,7 @@ public interface UserDao {
      * @return
      */
     User findById(Integer id);
-
+                           
     /**
      * 通过Id删除用户
      * @param id
