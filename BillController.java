@@ -38,7 +38,7 @@ public class BillController {
     @RequestMapping("/findByParams")
     public String findByParams(BillParam billParam, Model model,HttpServletRequest request){
 
-
+                          
 
         billParam.setCreationDate(request.getParameter("creationDate"));
 
