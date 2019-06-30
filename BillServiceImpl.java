@@ -31,8 +31,8 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public Integer removeById(Integer id) {
-        return billDao.removeById(id);
-    }
+        return billDao.removeById(id); 
+    }    
 
     @Override
     public Bill findById(Integer id) {
