@@ -28,7 +28,7 @@ public interface UserDao {
      * @return
      */
     List<User> getUserList();
-
+       
     /**
      *通过ID查询用户
      * @param id
