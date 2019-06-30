@@ -11,7 +11,7 @@ public interface RoleService {
      * @return
      */
     public List<Role> getRoleList();
-
+                                
     /**
      * @param role
      * @return
