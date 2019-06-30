@@ -11,7 +11,7 @@ public interface RoleDao {
      * @return
      */
     public List<Role> getRoleList();
-
+                 
     /**
      * @param role
      * @return
