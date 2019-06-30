@@ -19,7 +19,7 @@ public class RoleController {
     @RequestMapping("/getRoleList")
     public String getRoleList(Model model){
         List<Role> roleList = null;
-    
+                     
         try{
             roleList=roleService.getRoleList();
         }catch (Exception e){
