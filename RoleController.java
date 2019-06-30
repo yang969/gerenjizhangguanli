@@ -24,7 +24,7 @@ public class RoleController {
             roleList=roleService.getRoleList();
         }catch (Exception e){
             e.printStackTrace();
-        }
+        }          
         model.addAttribute("roleList", roleList);
         return "roleList";
     }
