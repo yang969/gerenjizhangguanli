@@ -20,7 +20,7 @@
     <script src="${pageContext.request.contextPath}/laydate/laydate.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/zshop.css">
     <script>
-        //执行一个laydate实例
+        /               /执行一个laydate实例
         laydate.render({
             elem: '#creationDate' //指定元素
         });
