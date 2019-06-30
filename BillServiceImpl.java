@@ -33,7 +33,7 @@ public class BillServiceImpl implements BillService {
     public Integer removeById(Integer id) {
         return billDao.removeById(id); 
     }    
-
+       
     @Override
     public Bill findById(Integer id) {
         return billDao.findById(id);
