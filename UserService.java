@@ -20,7 +20,7 @@ public interface UserService {
      * @return
      */
     boolean add(User user);
-
+   
     /**
      *用户列表
      * @return
