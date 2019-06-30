@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service("billService")
 public class BillServiceImpl implements BillService {
-
+             
     @Resource
     private BillDao billDao;
 
