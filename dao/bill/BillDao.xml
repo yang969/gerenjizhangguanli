@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.people.dao.bill.BillDao">
+
+    <resultMap id="BillMap" type="Bill">
+        <id property="id" column="id"/>
+        <result property="billCode" column="billCode"/>
+        <result property="isPayment" column="isPayment"/>
+        <result property="totalPrice" column="totalPrice"/>
+        <result property="creationDate" column="creationDate"/>
+        <result property="billDesc" column="billDesc"/>
+        <result property="roleId" column="roleId"/>
+        <association property="role" javaType="Role" column="role_id">
+            <id property="id" column="r.id"/>
+            <result property="roleName" column="roleName"/>
+            <result property="createdBy" column="createdBy"/>
+        </association>
+    </resultMap>
+
+    <select id="getBillList" resultMap="BillMap">
+        select b.id,b.billCode,b.isPayment,b.totalPrice,b.creationDate,b.billDesc,b.roleId,r.id 'r.id',r.roleName,r.createdBy
+        from bill b
+            left join role r on r.id = b.roleId
+            <where>
+                <if test="creationDate != null">
+                    and DATE_FORMAT(creationDate,'%m')=DATE_FORMAT(#{creationDate} ,'%m');
+                </if>
+            </where>
+    </select>
+    <insert id="addBill" parameterType="Bill">
+        insert into bill (billCode,isPayment,totalPrice,creationDate,billDesc,roleId) values (#{billCode} ,#{isPayment} ,
+        #{totalPrice} ,#{creationDate} ,#{billDesc} ,#{roleId} )
+    </insert>
+    <update id="modifyBill" parameterType="Bill">
+        update bill
+        set billCode=#{billCode} ,
+            isPayment=#{isPayment}  ,
+            totalPrice=#{totalPrice} ,
+            creationDate=#{creationDate},
+            billDesc=#{billDesc},
+            roleId=#{roleId}
+        where id=#{id}
+    </update>
+    <delete id="removeById" parameterType="Bill">
+        delete from bill
+        where id=#{id}
+    </delete>
+    <select id="findById" resultType="Bill">
+        select * from bill where id=#{id} ;
+    </select>
+    <select id="selectByParams" resultMap="BillMap" parameterType="cn.people.dao.bill.BillParam">
+        select b.id,b.billCode,b.isPayment,b.totalPrice,b.creationDate,b.billDesc,b.roleId,r.id 'r.id',r.roleName,r.createdBy
+        from bill b
+        left join role r on r.id = b.roleId
+        <where>
+            <if test="creationDate != null">
+                and DATE_FORMAT(creationDate,'%m')=DATE_FORMAT(#{creationDate} ,'%m');
+            </if>
+        </where>
+    </select>
+</mapper>
+
