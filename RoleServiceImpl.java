@@ -22,7 +22,7 @@ public class RoleServiceImpl implements RoleService {
     public Integer roleAdd(Role role) {
         return null;
     }
-
+        
     @Override
     public Integer updateRole(Role role) {
         return null;
