@@ -15,7 +15,7 @@ public interface RoleDao {
     /**
      * @param role
      * @return
-     */
+     *                /
     public Integer roleAdd(Role role);
 
     /**
