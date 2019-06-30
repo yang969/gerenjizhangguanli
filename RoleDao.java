@@ -25,7 +25,7 @@ public interface RoleDao {
     public Integer updateRole(Role role);
 
     /**
-     * @param id
+     * @param id              
      * @return
      */
     public Integer deleteRoleById(Integer id);
