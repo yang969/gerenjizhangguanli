@@ -13,7 +13,7 @@ public class User {
      *              /
     private String userName;
     /**
-     * 手机号
+     * 手机号                   
      */
     private String phone;
     /**
