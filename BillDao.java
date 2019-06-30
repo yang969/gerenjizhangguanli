@@ -4,7 +4,7 @@ import cn.people.pojo.Bill;
 import java.util.List;
 
 public interface BillDao {
-
+   
     List<Bill> getBillList();
 
     /**
