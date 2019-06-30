@@ -10,7 +10,7 @@ import java.util.List;
 @Service("roleService")
 public class RoleServiceImpl implements RoleService {
 
-    @Resource    
+    @Resource                   
     private RoleDao roleDao;
 
     @Override
