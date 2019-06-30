@@ -29,7 +29,7 @@ public interface RoleDao {
      * @return
      */
     public Integer deleteRoleById(Integer id);
-
+              
     /**
      * @param id
      * @return
