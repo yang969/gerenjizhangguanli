@@ -17,7 +17,7 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> getRoleList() {
         return roleDao.getRoleList();
     }
-
+    
     @Override
     public Integer roleAdd(Role role) {
         return null;
