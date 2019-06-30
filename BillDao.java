@@ -3,7 +3,7 @@ package cn.people.dao.bill;
 import cn.people.pojo.Bill;
 import java.util.List;
 
-public interface BillDao {
+public interface BillDao {                
    
     List<Bill> getBillList();
 
