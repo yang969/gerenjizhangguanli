@@ -5,7 +5,7 @@ import cn.people.pojo.Role;
 import java.util.List;
 
 public interface RoleDao {
-
+                                                              
     /**
      *
      * @return
