@@ -18,7 +18,7 @@
             <result property="createdBy" column="createdBy"/>
         </association>
     </resultMap>
-
+                            
     <select id="getBillList" resultMap="BillMap">
         select b.id,b.billCode,b.isPayment,b.totalPrice,b.creationDate,b.billDesc,b.roleId,r.id 'r.id',r.roleName,r.createdBy
         from bill b
