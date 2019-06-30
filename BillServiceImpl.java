@@ -18,7 +18,7 @@ public class BillServiceImpl implements BillService {
     public List<Bill> getBillList() {
         return billDao.getBillList();
     }
-
+           
     @Override
     public Integer addBill(Bill bill) {
         return billDao.addBill(bill);
